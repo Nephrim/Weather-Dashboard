@@ -16,7 +16,7 @@ const currentHumidity = document.querySelector("#current-humidity");
 const currentUV = document.querySelector("#current-uv");
 
 function getWeatherbyCityName(city) {
-  const params = new URLSearchParams({ q: city, appid: apiKey });
+  let params = new URLSearchParams({ q: city, appid: apiKey });
   fetch(geoEndpoint + params)
     .then((response) => response.json())
     .then(function (data) {
@@ -24,7 +24,7 @@ function getWeatherbyCityName(city) {
       const lat = data[0].lat;
       const lon = data[0].lon;
       const cityName = data[0].name;
-      const params = new URLSearchParams({
+      let params = new URLSearchParams({
         lat: lat,
         lon: lon,
         appid: apiKey,
@@ -69,9 +69,9 @@ form.addEventListener("submit", function (e) {
     alert("Your city name is invalid");
   }
   getWeatherbyCityName(city);
-  fetch(onecallEndpoint + params).then(function (response) {
-    console.log(response);
-  });
+  // fetch(onecallEndpoint + params).then(function (response) {
+  //   console.log(response);
+  // });
   var displayWeather = function (data, city) {
 
   };
