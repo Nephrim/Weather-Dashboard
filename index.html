@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather-Dashboard</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center bg-dark text-white p-4">Weather Dashboard</h1>
+    </header>
+    <div class="container">
+      <class class="row">
+        <div class="col-md-3">
+          <form id="search-weather" class="border-bottom pb-3">
+            <div class="mb-3">
+              <label for="city-name" class="form-label">City Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city-name"
+                placeholder="Search..."
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div id="recent-searches" class="mt-2">
+            <button class="btn btn-secondary w-100" id="recent-search-buttons">Search Results</button>
+          </div>
+        </div>
+        <div class="col-md-9 border border-secondary border-4">Weather Details
+          <h1 class="city" id="weather-location">City, Date, Img</h1>
+          <h3 class="current" id="current-temp">Temp:</h3>
+          <h3 class="current" id="current-wind">Wind:</h3>
+          <h3 class="current" id="current-humidity">Humidity:</h3>
+          <h3 class="w-25" id="current-uv">Uv Index:</h3>
+        </div> 
+      <div class ="forecast">
+        <div class ="row justify-content-center">
+      <div class ="col-md-2 p-3 bg-dark text-white m-3 height: 50px" id="day-1">Day 1</div>
+      <div class ="col-md-2 p-3 bg-dark text-white m-3 h-100" id="day-2">Day 2</div>
+      <div class ="col-md-2 p-3 bg-dark text-white m-3" id="day-3">Day 3</div>
+      <div class ="col-md-2 p-3 bg-dark text-white m-3" id="day-4">Day 4</div>
+      <div class ="col-md-2 p-3 bg-dark text-white m-3" id="day-5">Day 5</div>
+    </div>
+  </div>
+  <script src = "script.js"></script>
+  </body>
+</html>
